@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.design.widget.CoordinatorLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".module.music.children.me.children.local.LocalMusicActivity">
+
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/tb_local_toolbar"
+                style="@style/NoSpaceActionBarTheme"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/Toolbar.Menu"
+                app:navigationIcon="@mipmap/back"
+                app:title="本地音乐">
+            </android.support.v7.widget.Toolbar>
+
+            <com.flyco.tablayout.CommonTabLayout
+                android:id="@+id/ctl_local_tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/colorAccent"
+                app:tl_textsize="14sp"
+                app:tl_textSelectColor="@color/white"
+                app:tl_textUnselectColor="@color/unSelectColor"
+                app:tl_indicator_anim_enable="true"
+                app:tl_indicator_gravity="BOTTOM"
+                app:tl_indicator_margin_bottom="3dp"
+                app:tl_indicator_corner_radius="3dp"
+                app:tl_indicator_height="2dp"
+                app:tl_indicator_width="14dp"/>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_local_viewPage"
+            android:layout_width="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_height="match_parent"/>
+
+
+
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

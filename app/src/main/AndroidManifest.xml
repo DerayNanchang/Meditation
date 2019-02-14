@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.deray.meditation">
+
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".app.MeditationApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".module.main.view.MainActivity"
+            android:theme="@style/AppTheme">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".module.music.children.me.children.local.LocalMusicActivity" />
+        <activity android:name=".module.music.children.me.children.recent.RecentMusicActivity" />
+        <activity android:name=".module.music.children.me.children.down.DownLocalMusicActivity" />
+        <activity android:name=".module.music.children.me.children.collection.CollectionMusicActivity" />
+        <activity android:name=".module.music.search.ScanLocalMusicActivity" />
+        <activity android:name=".manage.music.TestActivity" />
+        <activity android:name=".module.music.play.PlayActivity" />
+        <activity android:name=".module.music.info.MusicInfoActivity" />
+        <activity
+            android:name=".module.music.search.SearchMusicActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".module.music.MusicMenuActivity" />
+
+        <!-- services -->
+        <service android:name=".service.music.MusicService" />
+        <service android:name=".service.music.TimingService" />
+
+        <!-- receivers -->
+        <receiver android:name=".receiver.HeadSetReceiver" />
+        <receiver android:name=".receiver.AlarmReceiver" />
+
+        <!-- test -->
+        <activity android:name=".base.text.Main2Activity">
+
+        </activity>
+        <activity android:name=".base.text.Main3Activity"></activity>
+    </application>
+
+</manifest>

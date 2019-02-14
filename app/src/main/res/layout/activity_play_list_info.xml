@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.deray.meditation.ui.view.SlideScrollView
+            android:id="@+id/sslView"
+            android:layout_width="match_parent"
+            android:fillViewport="false"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/rlRoot"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:background="@color/bottomLineColor"
+                    >
+                    <ImageView
+                        android:id="@+id/ivIcon"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/icon_default"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="日语"
+                        android:layout_marginTop="20dp"
+                        android:layout_alignTop="@id/ivIcon"
+                        android:layout_toRightOf="@id/ivIcon"
+                        android:layout_marginLeft="20dp"
+                        android:textColor="@color/white"
+                        />
+
+                </RelativeLayout>
+
+                <include android:id="@+id/include_fragment_singer" layout="@layout/fragment_single"/>
+
+            </LinearLayout>
+        </com.deray.meditation.ui.view.SlideScrollView>
+
+
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tbBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="歌单"
+            style="@style/NoSpaceActionBarTheme2"
+            app:titleTextColor="@android:color/white"
+            app:navigationIcon="@mipmap/back"
+            android:background="@color/w00" />
+    </RelativeLayout>
+</layout>

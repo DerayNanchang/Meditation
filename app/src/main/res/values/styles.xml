@@ -1,0 +1,101 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--// menu 三个白点-->
+        <item name="android:textColorSecondary">#ffffff</item>
+    </style>
+
+    <style name="BaseToolbar" parent="Base.Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/colorAccent</item>
+        <item name="titleTextAppearance">@style/ToolBar.Title</item>
+    </style>
+
+
+
+
+
+    <style name="NoSpaceActionBarTheme2" parent="Base.Widget.AppCompat.Toolbar">
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColorSecondary">#ffffff</item>
+        <item name="titleTextColor">#ffffff</item>
+        <item name="contentInsetStartWithNavigation">0dp</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="titleTextAppearance">@style/ToolBar.Title</item>
+        <item name="subtitleTextAppearance">@style/Toolbar.SubTitle</item>
+    </style>
+
+
+
+    <style name="NoSpaceActionBarTheme" parent="Base.Widget.AppCompat.Toolbar">
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/colorAccent</item>
+        <item name="android:textColorSecondary">#ffffff</item>
+        <item name="titleTextColor">#ffffff</item>
+        <item name="contentInsetStartWithNavigation">0dp</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="titleTextAppearance">@style/ToolBar.Title</item>
+        <item name="subtitleTextAppearance">@style/Toolbar.SubTitle</item>
+    </style>
+
+    <!--titlebar 标题-->
+    <style name="ToolBar.Title" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Toolbar.SubTitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/bottomLineColor2</item>
+    </style>
+
+
+
+<!--    <style name="Widget.Design.AppBarLayout" parent="android:Widget">
+        <item name="elevation">0dp</item>
+        <item name="android:background">?attr/colorPrimary</item>
+    </style>-->
+
+
+    <!--titlebar 副标题-->
+<!--    <style name="Toolbar.SubTitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+        <item name="android:textSize">9.0sp</item>
+        <item name="android:textColor">#99ffffff</item>
+    </style>-->
+
+    <!--弹出的menu 样式-->
+    <style name="Toolbar.Menu" parent="Widget.AppCompat.Light.PopupMenu.Overflow">
+        <!-- 是否覆盖锚点，为true则盖住Toolbar -->
+        <item name="overlapAnchor">false</item>
+        <!--         弹出层水平方向上的偏移，即距离屏幕左边的距离，负值会导致右边出现空隙-->
+        <item name="android:dropDownHorizontalOffset">-2dp</item>
+        <!-- 弹出层垂直方向上的偏移，即在竖直方向上距离Toolbar的距离，值为负则会盖住Toolbar -->
+        <item name="android:dropDownVerticalOffset">1dp</item>
+        <!-- 弹出层背景颜色 -->
+        <item name="android:popupBackground">@color/black</item>
+    </style>
+
+    <style name="toolbar_pop_theme">
+
+        <item name="android:textColor">@color/black</item>
+        <item name="android:drawablePadding">20dp</item>
+    </style>
+
+<!--    <style name="ToolbarPopupTheme" parent="Widget.AppCompat.Light.PopupMenu.Overflow">
+       &lt;!&ndash; <item name="android:colorBackground">#90000000</item>  &lt;!&ndash; 设置背景颜色&ndash;&gt;&ndash;&gt;
+        <item name="overlapAnchor">false</item>  &lt;!&ndash;设置不覆盖锚点&ndash;&gt;
+        &lt;!&ndash; 添加这一句， 即可改变toolbar menu 图标的颜色&ndash;&gt;
+        <item name="android:textColorSecondary">#ffffff</item>
+        &lt;!&ndash;toolbar标题文字颜色&ndash;&gt;
+        <item name="android:textColorPrimary">@android:color/white</item>
+    </style>-->
+
+
+
+</resources>

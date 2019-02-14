@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        />
+
+    <LinearLayout
+        android:id="@+id/llInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/ivIcon"
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"
+        >
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="化身孤岛的鲸"
+            android:textSize="14sp"
+            android:textColor="@color/black00"
+            />
+
+        <TextView
+            android:id="@+id/tvSingle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="不才 - 翻唱"
+            android:textSize="12sp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:src="@drawable/svg_close"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        />
+
+    <ImageView
+        android:id="@+id/ivNext"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/svg_next2"
+        android:layout_toLeftOf="@id/ivClose"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        />
+
+    <ImageView
+        android:id="@+id/ivPlay"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/svg_pause_4"
+        android:layout_toLeftOf="@id/ivNext"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        />
+
+    <ImageView
+        android:id="@+id/ivPre"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/svg_pre2"
+        android:layout_toLeftOf="@id/ivPlay"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        />
+
+</RelativeLayout>

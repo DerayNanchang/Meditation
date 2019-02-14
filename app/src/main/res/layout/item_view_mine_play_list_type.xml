@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/rl_mine_play_left_icon_root"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/Bg_mainBottomColor"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/iv_mine_play_left_icon_root"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp">
+
+            <ImageView
+                android:id="@+id/iv_mine_play_left_icon_switch"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center"
+                android:src="@drawable/svg_music_me_right" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_mine_play_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_mine_play_left_icon_root"
+            android:textSize="@dimen/textSize"
+            android:text="创建的歌单" />
+
+        <TextView
+            android:id="@+id/tv_mine_play_title_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@id/tv_mine_play_title"
+            android:textSize="@dimen/textSize"
+            android:text="(100)" />
+
+        <ImageView
+            android:id="@+id/iv_mine_play_left_icon_setting"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/svg_music_me_settings" />
+    </RelativeLayout>
+</layout>

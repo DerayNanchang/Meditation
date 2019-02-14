@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/rl_music_home_list_root"
+        android:layout_width="match_parent"
+        android:background="?attr/selectableItemBackground"
+        android:layout_height="55dp">
+
+        <ImageView
+            android:id="@+id/iv_music_home_list_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp" />
+
+        <TextView
+            android:id="@+id/tv_music_home_list_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/iv_music_home_list_icon"
+            android:text="本地音乐"
+            android:textColor="@color/lightBlack"
+            android:textSize="12sp"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_music_home_list_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/tv_music_home_list_title"
+            android:text="(100)"
+            android:textSize="12sp" />
+
+        <View
+            android:id="@+id/v_music_home_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:visibility="gone"
+            android:layout_alignLeft="@id/tv_music_home_list_title"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+
+</layout>
+

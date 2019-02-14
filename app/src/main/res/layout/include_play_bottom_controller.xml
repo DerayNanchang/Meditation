@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/white"
+        android:elevation="30dp"
+        android:layout_alignParentBottom="true"
+        >
+        <LinearLayout
+            android:id="@+id/ll_local_controller_root"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/ll_local_controller_menu_root"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:minWidth="200dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_local_controller_music_icon"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:padding="5dp"
+                    android:transitionName="icon"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_local_controller_music_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="歌曲 Title"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tv_local_controller_music_singer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="歌曲 message"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_local_controller_music_play"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
+                android:padding="12dp"
+                android:clickable="true"
+                android:visibility="gone"
+                android:src="@drawable/svg_pause" />
+
+            <com.deray.meditation.ui.view.CircleProgressBarView
+                android:id="@+id/cpbView"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                app:radius="13dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                />
+
+            <ImageView
+                android:id="@+id/iv_local_controller_music_menu"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="12dp"
+                android:clickable="true"
+                android:src="@drawable/svg_menu" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>
+

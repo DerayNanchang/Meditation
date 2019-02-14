@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <com.deray.meditation.ui.view.ViewMusicHomeItem
+                    android:id="@+id/vmht_music_me_localMusics"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="?attr/selectableItemBackground"
+                    app:setQuantity=""
+                    app:setTitle="本地音乐" />
+
+                <com.deray.meditation.ui.view.ViewMusicHomeItem
+                    android:id="@+id/vmht_music_me_recentlyPlayed"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="?attr/selectableItemBackground"
+                    app:setQuantity=""
+                    app:setTitle="最近播放" />
+
+                <com.deray.meditation.ui.view.ViewMusicHomeItem
+                    android:id="@+id/vmht_music_me_downloadManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:visibility="gone"
+                    app:setQuantity=""
+                    app:setTitle="下载管理" />
+
+                <com.deray.meditation.ui.view.ViewMusicHomeItem
+                    android:id="@+id/vmht_music_me_Collection"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="?attr/selectableItemBackground"
+                    app:setQuantity=""
+                    android:visibility="gone"
+                    app:setTitle="我的收藏" />
+
+                <com.deray.meditation.ui.view.ViewMusicHomeItem
+                    android:id="@+id/vmht_music_me_downloadMoment"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:visibility="gone"
+                    android:background="?attr/selectableItemBackground"
+                    app:setQuantity=""
+                    app:setTitle="Moment" />
+
+                <com.deray.meditation.ui.view.EnhancedExpandableListView
+                    android:id="@+id/elv_music_mine_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"
+                    android:groupIndicator="@null" />
+
+            </LinearLayout>
+    </ScrollView>
+</layout>
+

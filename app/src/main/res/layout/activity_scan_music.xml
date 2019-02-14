@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tb_search_title"
+            style="@style/NoSpaceActionBarTheme"
+            app:navigationIcon="@mipmap/back"
+            app:title="扫描本地音乐"/>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="100dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <com.deray.meditation.ui.view.RadarView
+                android:id="@+id/rvAnim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_scan_local_music_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <Button
+                android:id="@+id/btn_scan_finish"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/select_button_theme"
+                android:padding="10dp"
+                android:text="返回我的歌曲"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn_scan_start_scan"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/select_button_theme"
+                android:padding="10dp"
+                android:text="开始扫描歌曲吧"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_search_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="45dp"
+            android:layout_marginRight="30dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/iv_"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/svg_music_me_settings" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="扫描设置" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

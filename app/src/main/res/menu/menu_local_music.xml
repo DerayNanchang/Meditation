@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/svg_search"
+        android:title="@null"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_scan_local_music"
+        android:icon="@drawable/svg_menu_scan"
+        android:title="扫描本地音乐"
+        app:showAsAction="never" />
+
+</menu>

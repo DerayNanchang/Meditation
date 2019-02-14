@@ -1,0 +1,82 @@
+ext {
+    // app 相关版本控制
+    versions = [
+            sdkMinVersion     : 19,
+            sdkTargetVersion  : 27,
+            compileSdkVersion : 27,
+
+            sdkCompileVersion : 27,
+            toolsBuildVersion : "27.1.1",
+
+            appVersionCode    : 1,
+            appVersionName    : "1.0.0"
+    ]
+
+    // 依赖相关版本控制
+    depVersion = [
+            appCompatVersion : "27.1.1",
+
+            // config
+            constraint       : "1.1.2",
+            junit            : "4.12",
+            mockito          : "1.9.5",
+            runner           : "1.0.2",
+            espresso         : "3.0.2",
+
+            // import
+            logger           : "2.2.0",
+            rxandroid        : "2.0.2",
+            flycoTabLayout   : "2.1.2@aar",
+            glide            : "4.7.1",
+            greendao         : "3.2.2",
+            fastJSON         : "1.1.68",
+            rxPermissions    : "0.10.2",
+            easyBlur         : "1.0.0",
+            viewUtils        : "0.0.7",
+            retrofit         : "2.4.0",
+            rxjava2Adapter   : "2.4.0"
+
+    ]
+
+    // 依赖
+    deps = [
+
+            // support 包 相关的
+            suport : [
+                    appcompat   : "com.android.support:appcompat-v7:${depVersion.appCompatVersion}",
+                    support     : "com.android.support:support-v4:${depVersion.appCompatVersion}",
+                    recyclerview: "com.android.support:recyclerview-v7:${depVersion.appCompatVersion}",
+                    design      : "com.android.support:design:${depVersion.appCompatVersion}",
+                    cardview    : "com.android.support:cardview-v7:${depVersion.appCompatVersion}",
+                    palette     : "com.android.support:palette-v7:${depVersion.appCompatVersion}"
+            ],
+
+
+            // 项目 创建默认构建内容
+            config :[
+                    constraint : "com.android.support.constraint:constraint-layout:${depVersion.constraint}",
+                    junit      : "junit:junit:${depVersion.junit}",
+                    mockito    : "org.mockito:mockito-core:${depVersion.mockito}",
+                    runner     : "com.android.support.test:runner:${depVersion.runner}",
+                    espresso   : "com.android.support.test.espresso:espresso-core:${depVersion.espresso}"
+            ],
+
+
+
+
+            // 外部依赖库相关的
+            import :[
+                    logger          : "com.orhanobut:logger:${depVersion.logger}",
+                    rxandroid       : "io.reactivex.rxjava2:rxandroid:${depVersion.rxandroid}",
+                    flycoTabLayout  : "com.flyco.tablayout:FlycoTabLayout_Lib:${depVersion.flycoTabLayout}",
+                    glide           : "com.github.bumptech.glide:glide:${depVersion.glide}",
+                    greendao        : "org.greenrobot:greendao:${depVersion.greendao}",
+                    fastJSON        : "com.alibaba:fastjson:${depVersion.fastJSON}.android",
+                    rxPermissions   : "com.github.tbruyelle:rxpermissions:${depVersion.rxPermissions}",
+                    easyBlur        : "com.github.pinguo-zhouwei:EasyBlur:v${depVersion.easyBlur}",
+                    viewUtils       : "com.github.DerayNanchang:ViewUtils:${depVersion.viewUtils}",
+                    retrofit        : "com.squareup.retrofit2:retrofit:${depVersion.retrofit}",
+                    rxjava2Adapter  : "com.squareup.retrofit2:adapter-rxjava2:${depVersion.rxjava2Adapter}",
+            ]
+    ]
+}

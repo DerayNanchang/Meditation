@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_Bgp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:alpha="0.5"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_play_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/tb_play_bar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:navigationIcon="@mipmap/back"
+                style="@style/NoSpaceActionBarTheme2"
+                app:title="歌曲名称">
+
+                <ImageView
+                    android:id="@+id/ivCrontabs"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/svg_crontab"
+                    />
+
+            </android.support.v7.widget.Toolbar>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="12">
+
+                <View
+                    android:id="@+id/view_play_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="@drawable/select_jump_bg" />
+
+                <RelativeLayout
+                    android:id="@+id/rlViewPage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_play_line">
+
+                    <com.deray.meditation.ui.view.TrayView
+                        android:id="@+id/tvTrayView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/vp_play_center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:id="@+id/ivLike"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="50dp"
+                        android:visibility="gone"
+                        android:layout_marginBottom="10dp"
+                        />
+
+                    <RelativeLayout
+                        android:id="@+id/rlCenterRoot"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </RelativeLayout>
+
+                <com.deray.meditation.ui.view.LyricView
+                    android:id="@+id/lyric"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_play_progress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="00:00"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+                <SeekBar
+                    android:id="@+id/sb_play_music_bar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="12"
+                    android:indeterminate="false"
+                    android:maxHeight="2dp"
+                    android:minHeight="2dp"
+                    android:progressDrawable="@drawable/seekbar_style"
+                    android:thumb="@drawable/play_music_seek_bar_style" />
+
+                <TextView
+                    android:id="@+id/tv_play_duration"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="04:00"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2">
+
+                <ImageView
+                    android:id="@+id/iv_play_mode"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/svg_order"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    />
+
+
+                <ImageView
+                    android:id="@+id/iv_play"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/svg_pause_3" />
+
+                <ImageView
+                    android:id="@+id/iv_pre"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/iv_play"
+
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/svg_pre" />
+
+                    <ImageView
+                        android:id="@+id/iv_next"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/iv_play"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/svg_next" />
+
+
+                <ImageView
+                    android:id="@+id/iv_menu"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/svg_playlist2" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>
+
